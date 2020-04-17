@@ -1,0 +1,22 @@
+x=5;
+y=5;
+a0=10;
+a=a0;
+b0=10;
+h=1;
+b=(b0^2+(h/2)^2)^(1/2);
+xr=int32(3);
+yr=int32(3);
+x0=int32(0);
+y0=int32(0);
+xk=int32(2);
+yk=int32(2);
+sprx=int32([0 1]);
+spry=int32([1 1]);
+navput=py.Navigatsiya.navig(xr,yr,x0,y0,xk,yk,sprx,spry);
+elem11=int32(str2nu(char(py.Navigatsiya.elem(navput,int32(4),int32(1)))));
+put=[];
+for i=1:int32(str2num(char(py.Navigatsiya.len1(navput))))
+    put(i,1)=int32(str2num(char(py.Navigatsiya.elem(navput,int32(i-1),int32(0)))));
+    put(i,2)=int32(str2num(char(py.Navigatsiya.elem(navput,int32(i-1),int32(1)))));
+end
